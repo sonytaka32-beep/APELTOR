@@ -1,0 +1,43 @@
+# Gradle
+.gradle/
+build/
+local.properties
+*.log
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Android
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*.jar
+*.so
+*.o
+*.obj
+
+# Debug
+debug.keystore
+
+# Local config
+local.properties
+gradle.properties
+
+# Backup
+*~
+*.bak
+*.orig
+
+# Kotlin
+*.kt~
+*.kts~

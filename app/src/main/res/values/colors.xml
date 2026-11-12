@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- iOS Calculator Colors -->
+    <color name="ios_black">#000000</color>
+    <color name="ios_dark_gray">#333333</color>
+    <color name="ios_medium_gray">#505050</color>
+    <color name="ios_light_gray">#D4D4D4</color>
+    <color name="ios_white">#FFFFFF</color>
+    <color name="ios_orange">#FF9F0A</color>
+    <color name="ios_orange_pressed">#CC7700</color>
+    <color name="ios_gray_text">#EBEBF599</color>
+    <color name="ios_white_text">#FFFFFF</color>
+    <color name="ios_black_text">#000000</color>
+
+    <!-- Material3 semantic colors mapped to iOS style -->
+    <color name="md_theme_dark_surface">#000000</color>
+    <color name="md_theme_dark_on_surface">#FFFFFF</color>
+    <color name="md_theme_dark_primary">#FF9F0A</color>
+    <color name="md_theme_dark_on_primary">#000000</color>
+    <color name="md_theme_dark_secondary">#333333</color>
+    <color name="md_theme_dark_on_secondary">#FFFFFF</color>
+    <color name="md_theme_dark_tertiary">#505050</color>
+    <color name="md_theme_dark_on_tertiary">#FFFFFF</color>
+    <color name="md_theme_dark_error">#FF6B6B</color>
+    <color name="md_theme_dark_on_error">#000000</color>
+    <color name="md_theme_dark_outline">#505050</color>
+    <color name="md_theme_dark_background">#000000</color>
+    <color name="md_theme_dark_on_background">#FFFFFF</color>
+
+    <color name="md_theme_light_surface">#FFFFFF</color>
+    <color name="md_theme_light_on_surface">#000000</color>
+    <color name="md_theme_light_primary">#FF9F0A</color>
+    <color name="md_theme_light_on_primary">#000000</color>
+    <color name="md_theme_light_secondary">#D4D4D4</color>
+    <color name="md_theme_light_on_secondary">#000000</color>
+    <color name="md_theme_light_tertiary">#EBEBF5</color>
+    <color name="md_theme_light_on_tertiary">#000000</color>
+    <color name="md_theme_light_error">#DC3545</color>
+    <color name="md_theme_light_on_error">#FFFFFF</color>
+    <color name="md_theme_light_outline">#8E8E93</color>
+    <color name="md_theme_light_background">#F2F2F7</color>
+    <color name="md_theme_light_on_background">#000000</color>
+</resources>
