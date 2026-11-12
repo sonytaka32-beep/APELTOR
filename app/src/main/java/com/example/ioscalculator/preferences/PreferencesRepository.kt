@@ -1,15 +1,20 @@
 package com.example.ioscalculator.preferences
 
 import android.content.Context
-import androidx.datastore.preferences.core.mutations
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.MutablePreferences
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.preferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import androidx.datastore.preferences.preferencesKey
-import kotlinx.coroutines.flow.map
+import androidx.datastore.rxjava2.RxDataStoreBuilder
+import androidx.datastore.rxjava2.RxDataStore
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.tasks.await
 
-class PreferencesRepository(context: Context, scope: CoroutineScope) {
+class PreferencesRepository(context: Context, scope: kotlinx.coroutines.CoroutineScope) {
 
-    private val dataStore = context.preferencesDataStore("calculator_prefs")
+    private val dataStore: DataStore<Preferences> = context.preferencesDataStore("calculator_prefs")
 
     private object Keys {
         val ANGLE_MODE = preferencesKey<Int>("angle_mode")

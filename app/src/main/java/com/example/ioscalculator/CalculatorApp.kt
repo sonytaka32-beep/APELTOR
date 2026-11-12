@@ -10,7 +10,8 @@ import kotlinx.coroutines.SupervisorJob
 
 class CalculatorApp : Application() {
 
-    private val scope = CoroutineScope(SupervisorJob())
+    private val job = SupervisorJob()
+    private val scope = CoroutineScope(job)
 
     private var _database: CalculatorDatabase? = null
     val database: CalculatorDatabase
@@ -34,7 +35,7 @@ class CalculatorApp : Application() {
 
     override fun onTerminate() {
         super.onTerminate()
-        scope.cancel()
+        job.cancel()
         _database?.close()
     }
 }

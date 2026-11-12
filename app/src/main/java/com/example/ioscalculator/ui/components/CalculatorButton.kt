@@ -42,8 +42,7 @@ fun CalculatorButton(
         modifier = modifier
             .size(80.dp)
             .clip(RoundedCornerShape(40.dp))
-            .background(if (enabled) backgroundColor else backgroundColor.copy(alpha = 0.5f))
-            .fillMaxSize(),
+            .background(if (enabled) backgroundColor else backgroundColor.copy(alpha = 0.5f)),
         contentAlignment = Alignment.Center,
         propagateMinConstraints = false
     ) {

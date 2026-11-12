@@ -85,6 +85,6 @@ object CurrencyEngine {
     fun formatResult(value: Double): String {
         if (value.isInfinite() || value.isNaN()) return "Error"
         val rounded = (value * 10000).roundToLong() / 10000.0
-        return if (rounded == rounded.toLong()) rounded.toLong().toString() else rounded.toString()
+        return if (rounded == rounded.toLong().toDouble()) rounded.toLong().toString() else rounded.toString()
     }
 }

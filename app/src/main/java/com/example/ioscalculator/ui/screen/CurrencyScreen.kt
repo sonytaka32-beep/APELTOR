@@ -46,6 +46,7 @@ import com.example.ioscalculator.R
 import com.example.ioscalculator.currency.CurrencyEngine
 import com.example.ioscalculator.currency.CurrencyRate
 import com.example.ioscalculator.ui.theme.iOSCalculatorTheme
+import kotlinx.coroutines.Delay
 import kotlinx.coroutines.launch
 
 @Composable
@@ -103,7 +104,7 @@ fun CurrencyScreen(
                         isUpdating = true
                         // In real app, fetch from API
                         // Simulate update
-                        kotlinx.coroutines.Delay(1000)
+                        Delay(1000)
                         lastUpdated = "Just now"
                         isUpdating = false
                         isOffline = false
