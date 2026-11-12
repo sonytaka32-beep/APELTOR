@@ -32,6 +32,10 @@ jobs:
           cmdline-tools-version: latest
           platform-tools-version: latest
           emulator: false
+          licenses: |
+            android-sdk-license-.+
+            android-sdk-preview-license-.+
+            google-gdk-license-.+
 
       - name: Cache Gradle packages
         uses: actions/cache@v4
