@@ -32,7 +32,6 @@ debug.keystore
 
 # Local config
 local.properties
-gradle.properties
 
 # Backup
 *~
