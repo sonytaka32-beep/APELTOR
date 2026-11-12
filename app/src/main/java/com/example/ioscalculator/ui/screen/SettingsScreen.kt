@@ -162,6 +162,6 @@ fun SettingRow(
 
 object Icons {
     object Default {
-        val ChevronRight = androidx.compose.material.icons.Icons.Filled.ChevronRight
+        val ChevronRight = androidx.compose.material.icons.filled.ChevronRight
     }
 }

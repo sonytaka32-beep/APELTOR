@@ -391,8 +391,8 @@ fun CurrencyDropdown(
 
 object Icons {
     object Default {
-        val SwapVert = androidx.compose.material.icons.Icons.Filled.SwapVert
-        val Refresh = androidx.compose.material.icons.Icons.Filled.Refresh
+        val SwapVert = androidx.compose.material.icons.filled.SwapVert
+        val Refresh = androidx.compose.material.icons.filled.Refresh
     }
 }
 

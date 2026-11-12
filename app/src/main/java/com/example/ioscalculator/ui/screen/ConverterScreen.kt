@@ -353,7 +353,7 @@ fun CategoryDropdown(
 
 object Icons {
     object Default {
-        val SwapVert = androidx.compose.material.icons.Icons.Filled.SwapVert
-        val ExpandMore = androidx.compose.material.icons.Icons.Filled.ExpandMore
+        val SwapVert = androidx.compose.material.icons.filled.SwapVert
+        val ExpandMore = androidx.compose.material.icons.filled.ExpandMore
     }
 }

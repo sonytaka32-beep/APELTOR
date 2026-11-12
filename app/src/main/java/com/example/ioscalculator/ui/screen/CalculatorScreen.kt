@@ -386,7 +386,11 @@ fun CalculatorEngine.Function.symbol(inverse: Boolean): String = when (this) {
 // Icons
 object Icons {
     object Default {
-        val History = androidx.compose.material.icons.Icons.Filled.History
-        val Settings = androidx.compose.material.icons.Icons.Filled.Settings
+        val History = androidx.compose.material.icons.filled.History
+        val Settings = androidx.compose.material.icons.filled.Settings
+        val SwapVert = androidx.compose.material.icons.filled.SwapVert
+        val ExpandMore = androidx.compose.material.icons.filled.ExpandMore
+        val Refresh = androidx.compose.material.icons.filled.Refresh
+        val ChevronRight = androidx.compose.material.icons.filled.ChevronRight
     }
 }
