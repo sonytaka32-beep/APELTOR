@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.iOSCalculator" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Theme.iOSCalculator" parent="android:Theme.DeviceDefault.DayNight.NoActionBar">
         <item name="android:statusBarColor">@color/ios_black</item>
         <item name="android:navigationBarColor">@color/ios_black</item>
         <item name="android:windowLightStatusBar">false</item>
