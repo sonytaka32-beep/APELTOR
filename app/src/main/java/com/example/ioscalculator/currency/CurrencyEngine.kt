@@ -1,6 +1,7 @@
 package com.example.ioscalculator.currency
 
 import kotlinx.serialization.Serializable
+import kotlin.math.roundToLong
 
 @Serializable
 data class CurrencyRate(

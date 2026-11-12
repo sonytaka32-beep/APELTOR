@@ -10,6 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.viewmodel.ViewModel
 import androidx.lifecycle.viewmodel.ViewModelProvider
 import androidx.navigation.compose.NavHost
@@ -25,11 +26,13 @@ import com.example.ioscalculator.ui.screen.CurrencyScreen
 import com.example.ioscalculator.ui.screen.HistoryScreen
 import com.example.ioscalculator.ui.screen.SettingsScreen
 import com.example.ioscalculator.ui.theme.iOSCalculatorTheme
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
 
 class MainActivity : ComponentActivity() {
 
     private val calculatorEngine by lazy { CalculatorEngine() }
-    private val preferencesRepository by lazy { PreferencesRepository(this, kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.SupervisorJob())) }
+    private val preferencesRepository by lazy { PreferencesRepository(this, CoroutineScope(SupervisorJob())) }
     private val historyDao: HistoryDao by lazy { (application as CalculatorApp).historyDao }
 
     override fun onCreate(savedInstanceState: Bundle?) {

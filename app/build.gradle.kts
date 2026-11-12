@@ -72,6 +72,9 @@ dependencies {
     // Core Android
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.4")
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("androidx.window:window:1.3.0")
 
@@ -109,6 +112,7 @@ dependencies {
     kapt("androidx.room:room-compiler:2.6.1")
 
     // DataStore (preferences)
+    implementation("androidx.datastore:datastore-preferences-core:1.1.1")
     implementation("androidx.datastore:datastore-preferences:1.1.1")
 
     // Testing

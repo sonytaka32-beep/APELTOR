@@ -14,7 +14,7 @@ class CalculatorEngine {
     companion object {
         const val MAX_DIGITS = 15
         const val MAX_HISTORY = 100
-        private const val MC = MathContext(MAX_DIGITS + 5, RoundingMode.HALF_EVEN)
+        val MC = MathContext(MAX_DIGITS + 5, RoundingMode.HALF_EVEN)
     }
 
     // State
@@ -165,8 +165,8 @@ class CalculatorEngine {
             Function.SQUARE -> value * value
             Function.RECIPROCAL -> reciprocal(value)
             Function.FACTORIAL -> factorial(value)
-            Function.PI -> BigDecimal.PI
-            Function.E -> BigDecimal(Math.E.toString())
+            Function.PI -> PI
+            Function.E -> E
         }
         currentInput = formatResult(result)
         lastResult = result
@@ -192,6 +192,7 @@ class CalculatorEngine {
                 Operator.MULTIPLY -> left * right
                 Operator.DIVIDE -> if (right == BigDecimal.ZERO) throw ArithmeticException() else left.divide(right, MC)
                 Operator.POWER -> pow(left, right)
+                Operator.FACTORIAL -> left // Not used here
                 Operator.PERCENT -> left * right / 100
                 null -> right
             }
@@ -264,7 +265,7 @@ class CalculatorEngine {
         val n = d.toLong()
         if (n < 0 || n != d.toDouble() || n > 20) throw ArithmeticException()
         var result = BigDecimal.ONE
-        for (i in 2..n) result *= i
+        for (i in 2..n.toInt()) result *= i
         return result
     }
     private fun pow(base: BigDecimal, exp: BigDecimal): BigDecimal {
@@ -307,8 +308,8 @@ class CalculatorEngine {
     }
 }
 
-/**
- * BigDecimal extension for PI constant
- */
 val BigDecimal.PI: BigDecimal
     get() = BigDecimal(Math.PI.toString())
+
+val BigDecimal.E: BigDecimal
+    get() = BigDecimal(Math.E.toString())

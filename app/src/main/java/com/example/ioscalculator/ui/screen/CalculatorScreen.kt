@@ -106,6 +106,7 @@ fun CalculatorScreen(
                             is OperatorBtn -> handleClick { engine.inputOperator(btn.operator) }
                             is FunctionBtn -> handleClick { engine.applyFunction(btn.function) }
                             is ActionBtn -> handleClick { btn.action() }
+                            else -> Unit
                         }
                     }
                 )
@@ -310,6 +311,7 @@ fun ButtonGrid(
                             onClick = { onButtonClick(btn) },
                             buttonType = btn.type
                         )
+                        else -> Unit
                     }
                 }
             }
@@ -381,6 +383,7 @@ fun CalculatorEngine.Function.symbol(inverse: Boolean): String = when (this) {
     FACTORIAL -> "x!"
     PI -> "π"
     E -> "e"
+    else -> name
 }
 
 // Icons

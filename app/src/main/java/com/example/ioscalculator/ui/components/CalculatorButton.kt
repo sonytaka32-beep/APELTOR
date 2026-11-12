@@ -11,7 +11,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -29,12 +28,15 @@ fun CalculatorButton(
     fontSize: Int = 28
 ) {
     val colors = MaterialTheme.colorScheme
-    val (backgroundColor, contentColor, pressedColor) = when (buttonType) {
+    val buttonColors = when (buttonType) {
         ButtonType.NUMBER -> colors.secondary to colors.onSecondary to colors.secondaryContainer
         ButtonType.OPERATOR -> colors.primary to colors.onPrimary to colors.primaryContainer
         ButtonType.FUNCTION -> colors.tertiary to colors.onTertiary to colors.tertiaryContainer
         ButtonType.CLEAR -> colors.tertiary to colors.onTertiary to colors.tertiaryContainer
     }
+    val backgroundColor = buttonColors.first.first
+    val contentColor = buttonColors.first.second
+    val pressedColor = buttonColors.second
 
     Box(
         modifier = modifier
