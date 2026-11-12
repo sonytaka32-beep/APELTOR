@@ -9,15 +9,6 @@ android {
     namespace = "com.example.ioscalculator"
     compileSdk = 34
 
-    // Enable AndroidX and Jetifier (required for AndroidX dependencies)
-    buildFeatures {
-        dataBinding = false
-    }
-
-    // Force AndroidX usage (needed for AGP 8.5+ with AndroidX dependencies)
-    extra["android.useAndroidX"] = true
-    extra["android.enableJetifier"] = true
-
     defaultConfig {
         applicationId = "com.example.ioscalculator"
         minSdk = 24
