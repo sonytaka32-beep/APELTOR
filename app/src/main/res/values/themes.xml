@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.iOSCalculator" parent="android:Theme.DeviceDefault.DayNight.NoActionBar">
+    <style name="Theme.iOSCalculator">
         <item name="android:statusBarColor">@color/ios_black</item>
         <item name="android:navigationBarColor">@color/ios_black</item>
         <item name="android:windowLightStatusBar">false</item>
@@ -9,10 +9,10 @@
         <item name="android:colorBackground">@color/ios_black</item>
         <item name="android:textColorPrimary">@color/ios_white_text</item>
         <item name="android:textColorSecondary">@color/ios_gray_text</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
     </style>
 
     <style name="Theme.iOSCalculator.NoActionBar" parent="Theme.iOSCalculator">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
     </style>
 </resources>
